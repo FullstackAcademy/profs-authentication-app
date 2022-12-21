@@ -37,12 +37,14 @@ const Posts = (props) => {
       <button onClick={createPost}>New Post</button>
       {posts.map((post) => {
         return (
-          <div className="singlePost">
+          <div className={post.isAuthor ? 'singlePost myPost' : 'singlePost'}>
             <h3>{post.title}</h3>
             <p>{post.description}</p>
             <p>{post.price}</p>
             <p>{post.location}</p>
             <p>{post.willDeliver}</p>
+            {post.isAuthor ? <button>Edit</button> : null}
+            {post.isAuthor ? <button>Delete</button> : null}
           </div>
         );
       })}

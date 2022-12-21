@@ -19,3 +19,7 @@ form > * {
 .singlePost {
   border: 1px solid black;
 }
+
+.myPost {
+  background-color: cornSilk;
+}
